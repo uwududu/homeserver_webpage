@@ -1,0 +1,52 @@
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Q_81Gt0ZmOBGmeivr0YLLf8yCAIJqv9DZ7VvL3h2i0Zgjm1dHRf9iQCLexT66qoX-fDnUz6bseAP/pub?gid=3053895&single=true&output=csv
+
+
+
+
+
+para fazer as coisas abaixo, olhar o tutorial que o mano claudio me deu
+sudo apt install openssh-server
+sudo systemctl enable ssh --now
+
+sudo mkdir -p /var/www/aula-marcao
+sudo chown -r MEU-USUARIO:MEU_USUARIO /var/www/aula-marcao
+
+sudo nano /etc/apache2/sites-available/aula-marcao.conf
+<VirtualHost *:8080>
+    DocumentRoot /var/www/aula-marcao
+    <Directory /var/www/aula-marcao>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+sudo sed -i '/Listen 80/a Listen 8080' /etc/apache2/portas.conf
+sudo a2ensite aula-marcao.conf
+sudo systemctl reload apache2
+
+sudo usermod -aG MEU_USUARIO www-data
+sudo chmod -R 750 /var/www/aula-marcao
+
+
+
+parte de conectar via ssh do vscode
+apertar ctrl + shift + p
+ssh MEU_USUARIO@nas (trocar o nas pelo nome q o tailscale deu pro pc, ou uso o ip slaoq slaoq direto)
+ele vai pergunta onde salvar a configuração, geralmente fica no C:\Users\Aluno\.ssh\config  vai ficar assim la na escola
+aperto ctrl + shift + p dnv e clico em Connect to Host e escolher o host que acabei de salvar, vai pedir o usuario e senha do nas, ou eu uso a chave SSH
+por ser mais segura, eu ja estiver configurada
+no canto inferior esquerdo vai aparecer onde estou conectado, depois clico em abrir pasta, vou ate /var/www/aula-marcao.
+
+
+no powershell
+ssh-keygen -t ed25519
+ssh-copy-id MEU_USUARIO@nas
+
+
+
+verificar se os serviços vao ativar ao ligar o pc
+sudo systemctl enable apache2
+sudo systemctl enable mysql
+sudo systemctl enable ssh
+sudo systemctl enable tailscaled
