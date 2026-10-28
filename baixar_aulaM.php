@@ -1,11 +1,11 @@
 <?php
-$pasta = __DIR__ . '/files/';
+$pasta = __DIR__ . '/_files/';
 $nome = basename($_GET['arquivo'] ?? '');
 $caminho = $pasta . $nome;
 
 if (!file_exists($caminho)){
     http_response_code(404);
-    die('tem isso n man')
+    die('tem isso n man');
 }
 header('Content-Description: File Transfer');
 header('Content-Type: application/octet-stream');
