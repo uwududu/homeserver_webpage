@@ -115,6 +115,7 @@ nano .env
 ```
 Para um tutorial de como instalar/usar o Cassandra, visite o repositorio do responsavel do projeto do cassandra-agent: 
 https://github.com/DarkyHArry/cassandra-agent
+
 No arquivo `_chat/chat_api.php`, aponte a variável `$CASSANDRA_DIR` para o caminho onde o agente foi clonado.
 
 ---
