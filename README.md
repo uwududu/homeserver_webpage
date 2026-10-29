@@ -79,7 +79,7 @@ homeserver_webpage/
 ### 1. Clonar o Repositório
 ```bash
 cd /var/www/
-git clone https://github.com/SEU_USUARIO/homeserver_webpage.git
+git clone https://github.com/uwududu/homeserver_webpage.git
 sudo chown -R www-data:www-data homeserver_webpage
 sudo chmod -R 755 homeserver_webpage
 ```
