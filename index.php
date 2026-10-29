@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/config_bd.php';
 require_once __DIR__ . '/log.php';
-registrarLog($pdo, 'visita', 'Acessou sim.php');
+registrarLog($pdo, 'visita', 'Acessou index.php');
 
 // proximo evento
 $stmt = $pdo->prepare("SELECT data, titulo FROM eventos WHERE data >= CURDATE() ORDER BY data ASC LIMIT 1");
@@ -40,7 +40,7 @@ $gastos = buscarResumoGastos();
 
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="_css/aaaa.css">
+<link rel="stylesheet" href="_css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,9 +116,11 @@ $gastos = buscarResumoGastos();
         <section>
             <h2>Botões Principais</h2>
                 <div class="grid2">
-                    <a class="card2" href="#">nao sei</a>
+                    <a class="card2" href="midia.php">Mídia</a>
+                    <a class="card2" href="_chat/chat.php">Assistente IA</a>
+                    <a class="card2" href="_automacao_luz/lumus.php">Lumus</a>
                     <a class="card2" href="aula_marcao.php">aula marcão</a>
-                    <a class="card2" href="calendario.php">um fucking calendario irmao</a>
+                    <a class="card2" href="calendario.php">Calendário</a>
                 </div>
         </section>
 

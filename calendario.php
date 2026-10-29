@@ -32,14 +32,14 @@ foreach ($stmt->fetchAll() as $linha) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/aaaa.css">
+<link rel="stylesheet" href="_css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario porra</title>
+    <title>Calendário</title>
 </head>
 <body>
-    <a class="card" href="sim.php" style="display:inline-block; margin-bottom:16px;">&larr; Voltar</a>
+    <a class="card" href="index.php" style="display:inline-block; margin-bottom:16px;">&larr; Voltar</a>
     <h1><?= $nomesMeses[$mes] . ' de ' . $ano ?></h1>
 
     <div style="margin-bottom:16px">

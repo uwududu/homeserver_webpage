@@ -34,7 +34,7 @@ $logs = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<link rel="stylesheet" href="css/aaaa.css">
+<link rel="stylesheet" href="_css/style.css">
 <head><meta charset="UTF-8"><title>Logs</title></head>
 <body>
     <h1>Logs de acesso</h1>

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($dadosUsuario && password_verify($senha, $dadosUsuario['senha_hash'])) {
         $_SESSION['logado'] = true;
         $_SESSION['usuario'] = $dadosUsuario['usuario'];
-        header('Location: sim.php');
+        header('Location: ../index.php');
         exit;
     }
     else{

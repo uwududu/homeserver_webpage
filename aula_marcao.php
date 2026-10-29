@@ -4,7 +4,7 @@ registrarLog($pdo, 'visita', 'Acessou aula_marcao.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="_css/aaaa.css">
+<link rel="stylesheet" href="_css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@ registrarLog($pdo, 'visita', 'Acessou aula_marcao.php');
 </head>
 <body>
     <h1>Aula do Marcão</h1>
-    <a class="voltarHome" href="sim.php">Voltar</a>
+    <a class="voltarHome" href="index.php">Voltar</a>
     <section>
         <h2>Links</h2>
         <div class="grid">

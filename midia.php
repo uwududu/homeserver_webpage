@@ -17,14 +17,14 @@ sort($videos);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="_css/aaaa.css">
+<link rel="stylesheet" href="_css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skyler White yo</title>
+    <title>Central de Mídia</title>
 </head>
 <body>
-    <a class="card" href="sim.php" style="display:inline-block; margin: bottom 16px;">&larr; Voltar</a>
+    <a class="card" href="index.php" style="display:inline-block; margin-bottom: 16px;">&larr; Voltar</a>
     <h1>mídia</h1>
 
     <?php if (empty($videos)): ?>
